@@ -4,10 +4,12 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const sliderImages = [
-    "/assets/fresh-new.png",
-    "/assets/fresh-one.png",
-    "/assets/jjjjjj.png",
-    "/assets/newooo.png",
+    "/assets/inc.JPG",
+    "/assets/IMG_5623.JPG",
+    "/assets/IMG_5624.JPG",
+    "/assets/IMG_5626.JPG",
+    "/assets/IMG_5627.JPG",
+
 ];
 
 export default function HomeSlider() {
