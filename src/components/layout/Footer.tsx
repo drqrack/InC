@@ -19,7 +19,7 @@ const quickLinks = [
 
 export default function Footer() {
     return (
-        <footer className="bg-[#1e293b] text-white">
+        <footer className="bg-green-950 text-white">
             {/* Main Footer */}
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -108,7 +108,7 @@ export default function Footer() {
                             © {new Date().getFullYear()} I&C Shipping and Logistics. All rights reserved.
                         </p>
                         <p className="text-gray-400 text-sm">
-                            Designed with ❤️ for reliable shipping
+                            Powered by Pharasees
                         </p>
                     </div>
                 </div>

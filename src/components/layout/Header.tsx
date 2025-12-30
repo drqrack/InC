@@ -17,9 +17,9 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 w-full">
+        <header className="fixed top-0 z-50 w-full">
             {/* Top Ticker Bar */}
-            <div className="bg-primary text-white py-2 text-sm overflow-hidden">
+            <div className="bg-green-600 text-white py-2 text-sm overflow-hidden">
                 <div className="container mx-auto px-4 flex justify-between items-center">
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-2">
@@ -39,22 +39,19 @@ export default function Header() {
             </div>
 
             {/* Main Navigation */}
-            <nav className="bg-white shadow-md">
+            <nav className="bg-transparent backdrop-blur-md">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center justify-between h-16 lg:h-20">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3">
                             <Image
-                                src="/logo.png"
-                                alt="I&C Shipping and Logistics Logo"
-                                width={50}
-                                height={50}
-                                className="object-contain"
+                                src="/assets/logo.png"
+                                alt="I&C Shipping and Logistics"
+                                width={240}
+                                height={80}
+                                className="w-auto h-20 object-contain"
+                                priority
                             />
-                            <div className="hidden sm:block">
-                                <span className="font-bold text-lg text-primary">I&C Shipping</span>
-                                <span className="block text-xs text-muted-foreground">and Logistics</span>
-                            </div>
                         </Link>
 
                         {/* Desktop Navigation */}
@@ -63,7 +60,7 @@ export default function Header() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-foreground hover:text-primary font-medium transition-colors"
+                                    className="text-[#06dfb6] hover:text-[#05bfa0] font-medium transition-colors"
                                 >
                                     {link.name}
                                 </Link>
@@ -74,22 +71,21 @@ export default function Header() {
                         <div className="hidden lg:flex items-center gap-4">
                             <Link
                                 href="/tracking"
-                                className="px-5 py-2.5 bg-[#FC7808] text-white rounded-lg font-medium hover:bg-[#e06a00] transition-colors"
+                                className="px-5 py-1.5 bg-[#06dfb6] border-1 border-[#06dfb6] text-white rounded-lg font-medium hover:bg-[#05bfa0] transition-colors"
                             >
                                 Track Shipment
                             </Link>
                             <Link
                                 href="/contact"
-                                className="px-5 py-2.5 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-white transition-colors"
+                                className="px-3 py-1.5 border-1 border-[#06dfb6] text-[#06dfb6] rounded-lg font-medium hover:bg-[#06dfb6] hover:text-white transition-colors"
                             >
                                 Get Quote
                             </Link>
                         </div>
 
-                        {/* Mobile Menu Button */}
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="lg:hidden p-2 text-foreground"
+                            className="lg:hidden p-2 text-white"
                             aria-label="Toggle menu"
                         >
                             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}

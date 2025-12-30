@@ -5,7 +5,7 @@ export default function CTASection() {
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
-                <div className="bg-gradient-to-br from-[#FC7808] via-[#f08910] to-[#d86800] rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-[#06dfb6] via-[#f08910] to-[#d86800] rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
                     {/* Decorative elements */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
                     <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />

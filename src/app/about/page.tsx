@@ -1,6 +1,10 @@
+"use client";
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Target, Eye, Users, Award, CheckCircle } from "lucide-react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const values = [
     {
@@ -34,20 +38,75 @@ const milestones = [
     { year: "2024", event: "Expanded to 25+ countries" },
 ];
 
+const sliderImages = [
+    "/assets/IMG_5624.JPG",
+    "/assets/IMG_5623.JPG",
+    "/assets/IMG_5626.JPG",
+    "/assets/inc.JPG",
+];
+
 export default function AboutPage() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % sliderImages.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <>
             <Header />
             <main>
                 {/* Hero Section */}
                 <section className="bg-gradient-to-br from-[#1d4ed8] to-[#1e40af] py-20">
-                    <div className="container mx-auto px-4 text-center">
+                    <div className="container mx-auto px-4 text-center mt-20">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                             About I&C Shipping
                         </h1>
-                        <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+                        <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-12">
                             Your trusted partner for global logistics solutions since 2014
                         </p>
+
+
+                    </div>
+                </section>
+
+                {/* Hero Slider */}
+                <section className="relative py-12">
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#1e40af] to-white h-2/3 -z-10" />
+                    <div className="container mx-auto px-4">
+                        <div className="relative w-full max-w-5xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                            {sliderImages.map((src, index) => (
+                                <div
+                                    key={src}
+                                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"
+                                        }`}
+                                >
+                                    <Image
+                                        src={src}
+                                        alt={`About Us Slide ${index + 1}`}
+                                        fill
+                                        className="object-cover"
+                                        priority={index === 0}
+                                    />
+                                </div>
+                            ))}
+                            {/* Slider Indicators */}
+                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                                {sliderImages.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => setCurrentIndex(index)}
+                                        className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? "bg-white w-6" : "bg-white/50"
+                                            }`}
+                                        aria-label={`Go to slide ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </section>
 

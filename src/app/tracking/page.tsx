@@ -48,8 +48,8 @@ function TrackingContent() {
     return (
         <main>
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-[#1d4ed8] to-[#1e40af] py-16">
-                <div className="container mx-auto px-4">
+            <section className="bg-gradient-to-br from-[#1d4ed8] to-[#1e40af] py-20">
+                <div className="container mx-auto px-4 mt-20">
                     <div className="max-w-2xl mx-auto text-center">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                             Track Your Shipment
@@ -157,10 +157,10 @@ function TrackingContent() {
                                         <div key={index} className="flex gap-4">
                                             <div className="flex flex-col items-center">
                                                 <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${event.completed
-                                                        ? "bg-[#10b981]"
-                                                        : event.current
-                                                            ? "bg-[#FC7808]"
-                                                            : "bg-gray-200"
+                                                    ? "bg-[#10b981]"
+                                                    : event.current
+                                                        ? "bg-[#FC7808]"
+                                                        : "bg-gray-200"
                                                     }`}>
                                                     {event.completed ? (
                                                         <CheckCircle className="text-white" size={16} />

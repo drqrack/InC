@@ -14,7 +14,7 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="relative bg-gradient-to-br from-[#1d4ed8] via-[#2563eb] to-[#1e40af] min-h-[600px] flex items-center">
+        <section className="relative bg-gradient-to-br from-[#1d4ed8] via-[#2563eb] to-[#ffffff] min-h-[600px] flex items-center mt-10">
             {/* Background Pattern */}
             <div
                 className="absolute inset-0 opacity-10"
@@ -31,13 +31,13 @@ export default function HeroSection() {
                         <span className="text-[#FC7808] block mt-2">Global Logistics</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+                    {/* <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
                         Fast, reliable, and affordable shipping solutions from Ghana to anywhere in the world. Track your shipments in real-time.
-                    </p>
+                    </p> */}
 
                     {/* Tracking Form */}
                     <form onSubmit={handleTrack} className="max-w-xl mx-auto mb-8">
-                        <div className="bg-white rounded-2xl shadow-2xl p-2 flex flex-col sm:flex-row gap-2">
+                        <div className="bg-transparent shadow-2xl p-2 flex flex-col sm:flex-row gap-0">
                             <div className="relative flex-grow">
                                 <Package className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
                                 <input
@@ -45,12 +45,12 @@ export default function HeroSection() {
                                     placeholder="Enter your tracking number..."
                                     value={trackingNumber}
                                     onChange={(e) => setTrackingNumber(e.target.value)}
-                                    className="w-full pl-12 pr-4 py-4 rounded-xl bg-muted text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                                    className="w-full pl-12 pr-4 py-4 bg-muted text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                                 />
                             </div>
                             <button
                                 type="submit"
-                                className="flex items-center justify-center gap-2 px-8 py-4 bg-[#FC7808] hover:bg-[#e06a00] text-white font-semibold rounded-xl transition-colors"
+                                className="flex items-center justify-center gap-2 px-8 py-4 bg-[#FC7808] hover:bg-[#e06a00] text-white font-semibold transition-colors"
                             >
                                 <Search size={20} />
                                 <span>Track</span>

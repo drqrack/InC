@@ -58,7 +58,7 @@ export default function ContactPage() {
             <main>
                 {/* Hero Section */}
                 <section className="bg-gradient-to-br from-[#1d4ed8] to-[#1e40af] py-20">
-                    <div className="container mx-auto px-4 text-center">
+                    <div className="container mx-auto px-4 text-center mt-20">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                             Contact Us
                         </h1>

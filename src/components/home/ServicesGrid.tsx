@@ -1,48 +1,42 @@
-import { Plane, Ship, FileCheck, ShoppingBag, Warehouse, Truck } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
     {
-        icon: Plane,
         title: "Air Freight",
         description: "Fast and efficient air cargo services for time-sensitive shipments worldwide.",
         href: "/services#air-freight",
-        color: "from-blue-500 to-blue-600",
+        image: "/assets/air-freight2.webp",
     },
     {
-        icon: Ship,
         title: "Ocean Freight",
         description: "Cost-effective sea shipping for large volume cargo and containers.",
         href: "/services#ocean-freight",
-        color: "from-cyan-500 to-cyan-600",
+        image: "/assets/ocean-freight.avif",
     },
     {
-        icon: FileCheck,
         title: "Customs Clearance",
         description: "Expert handling of all customs documentation and regulatory compliance.",
         href: "/services#customs",
-        color: "from-emerald-500 to-emerald-600",
+        image: "/assets/customs.jpg",
     },
     {
-        icon: ShoppingBag,
         title: "Procurement",
         description: "End-to-end procurement and sourcing services from trusted suppliers.",
         href: "/services#procurement",
-        color: "from-orange-500 to-orange-600",
+        image: "/assets/procurement.jpg",
     },
     {
-        icon: Warehouse,
         title: "Warehousing",
         description: "Secure storage facilities with inventory management solutions.",
         href: "/services#warehousing",
-        color: "from-purple-500 to-purple-600",
+        image: "/assets/warehousing.webp",
     },
     {
-        icon: Truck,
         title: "Door-to-Door",
         description: "Complete delivery service from pickup to final destination.",
         href: "/services#delivery",
-        color: "from-red-500 to-red-600",
+        image: "/assets/Door-to-Door.jpg",
     },
 ];
 
@@ -66,17 +60,24 @@ export default function ServicesGrid() {
                         <Link
                             key={service.title}
                             href={service.href}
-                            className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                            className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block h-full overflow-hidden"
                         >
-                            <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${service.color} mb-4`}>
-                                <service.icon className="text-white" size={28} />
+                            <div className="relative w-full h-48">
+                                <Image
+                                    src={service.image}
+                                    alt={service.title}
+                                    fill
+                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
                             </div>
-                            <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                                {service.title}
-                            </h3>
-                            <p className="text-muted-foreground leading-relaxed">
-                                {service.description}
-                            </p>
+                            <div className="p-6">
+                                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                                    {service.title}
+                                </h3>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    {service.description}
+                                </p>
+                            </div>
                         </Link>
                     ))}
                 </div>

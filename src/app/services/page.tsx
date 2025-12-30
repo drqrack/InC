@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import { Plane, Ship, FileCheck, ShoppingBag, Warehouse, Truck, ArrowRight, CheckCircle } from "lucide-react";
 
 const services = [
@@ -19,6 +20,7 @@ const services = [
             "Temperature-controlled shipments",
         ],
         color: "from-blue-500 to-blue-600",
+        image: "/assets/air-cargo.webp",
     },
     {
         id: "ocean-freight",
@@ -35,6 +37,7 @@ const services = [
             "Specialized container types available",
         ],
         color: "from-cyan-500 to-cyan-600",
+        image: "/assets/ocean-freight.avif",
     },
     {
         id: "customs",
@@ -51,6 +54,7 @@ const services = [
             "Quick clearance processing",
         ],
         color: "from-emerald-500 to-emerald-600",
+        image: "/assets/customs.jpg",
     },
     {
         id: "procurement",
@@ -67,6 +71,7 @@ const services = [
             "Payment facilitation",
         ],
         color: "from-orange-500 to-orange-600",
+        image: "/assets/procurement.jpg",
     },
     {
         id: "warehousing",
@@ -83,6 +88,7 @@ const services = [
             "Flexible storage terms",
         ],
         color: "from-purple-500 to-purple-600",
+        image: "/assets/warehousing.jpg",
     },
     {
         id: "delivery",
@@ -99,6 +105,7 @@ const services = [
             "White-glove service available",
         ],
         color: "from-red-500 to-red-600",
+        image: "/assets/delivery.jpg",
     },
 ];
 
@@ -109,7 +116,7 @@ export default function ServicesPage() {
             <main>
                 {/* Hero Section */}
                 <section className="bg-gradient-to-br from-[#1d4ed8] to-[#1e40af] py-20">
-                    <div className="container mx-auto px-4 text-center">
+                    <div className="container mx-auto px-4 text-center mt-20">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                             Our Services
                         </h1>
@@ -131,9 +138,9 @@ export default function ServicesPage() {
                                         }`}
                                 >
                                     <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                                        <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.color} mb-4`}>
+                                        {/* <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.color} mb-4`}>
                                             <service.icon className="text-white" size={32} />
-                                        </div>
+                                        </div> */}
                                         <h2 className="text-3xl font-bold text-gray-800 mb-4">{service.title}</h2>
                                         <p className="text-gray-600 mb-6 leading-relaxed">{service.longDesc}</p>
                                         <ul className="space-y-3 mb-6">
@@ -153,8 +160,13 @@ export default function ServicesPage() {
                                         </Link>
                                     </div>
                                     <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                                        <div className={`aspect-video bg-gradient-to-br ${service.color} rounded-3xl flex items-center justify-center`}>
-                                            <service.icon className="text-white/30" size={120} />
+                                        <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
+                                            <Image
+                                                src={service.image}
+                                                alt={service.title}
+                                                fill
+                                                className="object-cover"
+                                            />
                                         </div>
                                     </div>
                                 </div>
