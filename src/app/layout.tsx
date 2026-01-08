@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${ubuntu.variable} ${ubuntu.className} antialiased`}>
+      <body className={`${ubuntu.variable} ${ubuntu.className} antialiased`} suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

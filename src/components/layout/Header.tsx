@@ -8,8 +8,8 @@ import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Tracking", href: "/tracking" },
+    { name: "Shipping Address", href: "/address" },
+    { name: "Container Loadings", href: "/container-loadings" },
     { name: "Contact", href: "/contact" },
 ];
 
@@ -19,7 +19,7 @@ export default function Header() {
     return (
         <header className="fixed top-0 z-50 w-full">
             {/* Top Ticker Bar */}
-            <div className="bg-green-600 text-white py-2 text-sm overflow-hidden">
+            <div className="bg-[#000322] text-white py-2 text-sm overflow-hidden">
                 <div className="container mx-auto px-4 flex justify-between items-center">
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-2">
@@ -45,11 +45,11 @@ export default function Header() {
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3">
                             <Image
-                                src="/assets/logo.png"
+                                src="/assets/inc_logo.png"
                                 alt="I&C Shipping and Logistics"
                                 width={240}
                                 height={80}
-                                className="w-auto h-20 object-contain"
+                                className="w-auto h-12 lg:h-20 object-contain"
                                 priority
                             />
                         </Link>
@@ -60,7 +60,7 @@ export default function Header() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-[#06dfb6] hover:text-[#05bfa0] font-medium transition-colors"
+                                    className="text-[#000322] hover:text-[#027a65] font-medium transition-colors"
                                 >
                                     {link.name}
                                 </Link>
@@ -70,14 +70,14 @@ export default function Header() {
                         {/* CTA Buttons */}
                         <div className="hidden lg:flex items-center gap-4">
                             <Link
-                                href="/tracking"
-                                className="px-5 py-1.5 bg-[#06dfb6] border-1 border-[#06dfb6] text-white rounded-lg font-medium hover:bg-[#05bfa0] transition-colors"
+                                href="/container-loadings"
+                                className="px-5 py-1.5 bg-[#039B81] border-1 border-[#039B81] text-white rounded-lg font-medium hover:bg-[#027a65] hover:text-white transition-colors"
                             >
-                                Track Shipment
+                                Container Loadings
                             </Link>
                             <Link
                                 href="/contact"
-                                className="px-3 py-1.5 border-1 border-[#06dfb6] text-[#06dfb6] rounded-lg font-medium hover:bg-[#06dfb6] hover:text-white transition-colors"
+                                className="px-3 py-1.5 border-1 border-[#039B81] text-[#039B81] rounded-lg font-medium hover:bg-[#039B81] hover:text-white transition-colors"
                             >
                                 Get Quote
                             </Link>
@@ -108,11 +108,11 @@ export default function Header() {
                                 ))}
                                 <div className="flex flex-col gap-2 mt-4 px-4">
                                     <Link
-                                        href="/tracking"
-                                        className="w-full text-center px-5 py-3 bg-[#FC7808] text-white rounded-lg font-medium"
+                                        href="/container-loadings"
+                                        className="w-full text-center px-5 py-3 bg-[#FC6100] text-white rounded-lg font-medium"
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
-                                        Track Shipment
+                                        Container Loadings
                                     </Link>
                                     <Link
                                         href="/contact"

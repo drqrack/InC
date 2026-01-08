@@ -47,7 +47,7 @@ function AnimatedCounter({ target, suffix }: { target: number; suffix: string })
     }, [target]);
 
     return (
-        <div ref={ref} className="text-4xl md:text-5xl font-bold text-white">
+        <div ref={ref} className="text-4xl md:text-5xl font-bold text-black">
             {count.toLocaleString()}{suffix}
         </div>
     );
@@ -55,16 +55,16 @@ function AnimatedCounter({ target, suffix }: { target: number; suffix: string })
 
 export default function StatsSection() {
     return (
-        <section className="py-16 bg-gradient-to-r from-[#1d4ed8] to-[#1e40af]">
+        <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                     {stats.map((stat) => (
                         <div key={stat.label} className="text-center">
-                            <div className="inline-flex p-3 bg-white/10 rounded-full mb-4">
-                                <stat.icon className="text-[#FC7808]" size={32} />
+                            <div className="inline-flex p-3 bg-[#039B81]/10 rounded-full mb-4">
+                                <stat.icon className="text-[#039B81]" size={32} />
                             </div>
                             <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                            <p className="text-blue-100 mt-2">{stat.label}</p>
+                            <p className="text-[#039B81] font-medium mt-2">{stat.label}</p>
                         </div>
                     ))}
                 </div>

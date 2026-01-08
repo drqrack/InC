@@ -47,7 +47,7 @@ export default function ServicesGrid() {
                 {/* Section Header */}
                 <div className="text-center mb-14">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                        Our <span className="text-primary">Services</span>
+                        Our <span className="text-[#039B81]">Services</span>
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
                         Comprehensive logistics solutions tailored to meet your shipping needs
@@ -71,7 +71,7 @@ export default function ServicesGrid() {
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-[#039B81] transition-colors">
                                     {service.title}
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">

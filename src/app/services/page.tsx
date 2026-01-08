@@ -153,7 +153,7 @@ export default function ServicesPage() {
                                         </ul>
                                         <Link
                                             href="/contact"
-                                            className="inline-flex items-center gap-2 px-6 py-3 bg-[#FC7808] hover:bg-[#e06a00] text-white font-semibold rounded-lg transition-colors"
+                                            className="inline-flex items-center gap-2 px-6 py-3 bg-[#FC6100] hover:bg-[#E05500] text-white font-semibold rounded-lg transition-colors"
                                         >
                                             Get a Quote
                                             <ArrowRight size={20} />

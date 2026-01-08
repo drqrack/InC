@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                        Why Choose <span className="text-primary">I&C Shipping?</span>
+                        Why Choose <span className="text-[#039B81]">I&C Shipping?</span>
                     </h2>
                     <p className="text-muted-foreground text-lg">
                         With years of experience in the logistics industry, we have built a reputation for excellence and reliability. Here's what sets us apart:
@@ -42,8 +42,8 @@ export default function WhyChooseUs() {
                     {features.map((feature) => (
                         <div key={feature.title} className="flex gap-4 p-6 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors">
                             <div className="flex-shrink-0">
-                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                                    <feature.icon className="text-primary" size={24} />
+                                <div className="w-12 h-12 bg-[#039B81]/10 rounded-xl flex items-center justify-center">
+                                    <feature.icon className="text-[#039B81]" size={24} />
                                 </div>
                             </div>
                             <div className="text-left">

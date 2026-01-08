@@ -78,8 +78,8 @@ export default function ContactPage() {
                                     href={info.action}
                                     className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center"
                                 >
-                                    <div className="w-14 h-14 bg-[#FC7808]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <info.icon className="text-[#FC7808]" size={28} />
+                                    <div className="w-14 h-14 bg-[#039B81]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <info.icon className="text-[#039B81]" size={28} />
                                     </div>
                                     <h3 className="text-lg font-semibold text-gray-800 mb-2">{info.title}</h3>
                                     {info.details.map((detail, idx) => (
@@ -169,7 +169,7 @@ export default function ContactPage() {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#FC7808] hover:bg-[#e06a00] text-white font-semibold rounded-lg transition-colors"
+                                        className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#FC6100] hover:bg-[#E05500] text-white font-semibold rounded-lg transition-colors"
                                     >
                                         <Send size={20} />
                                         Send Message

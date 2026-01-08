@@ -73,7 +73,7 @@ function TrackingContent() {
                             <button
                                 type="submit"
                                 disabled={isSearching}
-                                className="flex items-center justify-center gap-2 px-8 py-4 bg-[#FC7808] hover:bg-[#e06a00] disabled:bg-gray-400 text-white font-semibold rounded-xl transition-colors"
+                                className="flex items-center justify-center gap-2 px-8 py-4 bg-[#FC6100] hover:bg-[#E05500] disabled:bg-gray-400 text-white font-semibold rounded-xl transition-colors"
                             >
                                 {isSearching ? (
                                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -123,9 +123,9 @@ function TrackingContent() {
                                         <p className="text-sm text-gray-500">Tracking Number</p>
                                         <p className="text-xl font-bold text-gray-800">{trackingData.number || "INC" + Math.random().toString().slice(2, 8)}</p>
                                     </div>
-                                    <div className="flex items-center gap-2 px-4 py-2 bg-[#FC7808]/10 rounded-full">
-                                        <div className="w-2 h-2 bg-[#FC7808] rounded-full animate-pulse" />
-                                        <span className="font-semibold text-[#FC7808]">{trackingData.status}</span>
+                                    <div className="flex items-center gap-2 px-4 py-2 bg-[#039B81]/10 rounded-full">
+                                        <div className="w-2 h-2 bg-[#039B81] rounded-full animate-pulse" />
+                                        <span className="font-semibold text-[#039B81]">{trackingData.status}</span>
                                     </div>
                                 </div>
 
@@ -159,7 +159,7 @@ function TrackingContent() {
                                                 <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${event.completed
                                                     ? "bg-[#10b981]"
                                                     : event.current
-                                                        ? "bg-[#FC7808]"
+                                                        ? "bg-[#039B81]"
                                                         : "bg-gray-200"
                                                     }`}>
                                                     {event.completed ? (
@@ -176,8 +176,7 @@ function TrackingContent() {
                                                 )}
                                             </div>
                                             <div className="pb-8">
-                                                <p className={`font-medium ${event.current ? "text-[#FC7808]" : event.completed ? "text-gray-800" : "text-gray-400"
-                                                    }`}>
+                                                <p className={`font-medium ${event.current ? "text-[#039B81]" : event.completed ? "text-gray-800" : "text-gray-400"}`}>
                                                     {event.status}
                                                 </p>
                                                 <p className="text-sm text-gray-500">{event.date}</p>

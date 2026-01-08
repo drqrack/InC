@@ -5,11 +5,13 @@
   --color-primary: #1d4ed8;
   /* Royal Blue */
   --color-primary-dark: #1e40af;
-  --color-secondary: #FC7808;
+  --color-secondary: #FC6100;
   /* Orange */
-  --color-secondary-dark: #e06a00;
-  --color-accent: #10b981;
-  /* Emerald Green */
+  --color-secondary-dark: #e05500;
+  --color-accent: #039B81;
+  /* Teal */
+  --color-brand-dark: #000322;
+  /* Dark Blue */
 
   /* Neutral Colors */
   --background: #ffffff;
@@ -28,6 +30,7 @@
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
   --color-accent: var(--color-accent);
+  --color-brand-dark: var(--color-brand-dark);
   --font-sans: var(--font-ubuntu);
   --font-mono: var(--font-geist-mono);
 }

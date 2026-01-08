@@ -11,7 +11,7 @@ const services = [
 
 const quickLinks = [
     { name: "About Us", href: "/about" },
-    { name: "Track Shipment", href: "/tracking" },
+    { name: "Container Loadings", href: "/container-loadings" },
     { name: "Get Quote", href: "/contact" },
     { name: "Terms & Conditions", href: "/terms" },
     { name: "Privacy Policy", href: "/privacy" },
@@ -19,27 +19,27 @@ const quickLinks = [
 
 export default function Footer() {
     return (
-        <footer className="bg-green-950 text-white">
+        <footer className="bg-[#000322] text-white pt-16 pb-8">
             {/* Main Footer */}
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4 text-[#FC7808]">I&C Shipping and Logistics</h3>
+                        <h3 className="text-xl font-bold mb-4 text-[#039B81]">I&C Shipping and Logistics</h3>
                         <p className="text-gray-300 mb-4 leading-relaxed">
                             Your trusted partner for all freight and logistics needs. We deliver excellence across air, sea, and land.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="text-gray-300 hover:text-[#FC7808] transition-colors">
+                            <a href="#" className="text-gray-300 hover:text-[#039B81] transition-colors">
                                 <Facebook size={20} />
                             </a>
-                            <a href="#" className="text-gray-300 hover:text-[#FC7808] transition-colors">
+                            <a href="#" className="text-gray-300 hover:text-[#039B81] transition-colors">
                                 <Twitter size={20} />
                             </a>
-                            <a href="#" className="text-gray-300 hover:text-[#FC7808] transition-colors">
+                            <a href="#" className="text-gray-300 hover:text-[#039B81] transition-colors">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="text-gray-300 hover:text-[#FC7808] transition-colors">
+                            <a href="#" className="text-gray-300 hover:text-[#039B81] transition-colors">
                                 <Linkedin size={20} />
                             </a>
                         </div>
@@ -47,30 +47,26 @@ export default function Footer() {
 
                     {/* Services */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+                        <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
-                            {services.map((service) => (
-                                <li key={service.name}>
-                                    <Link
-                                        href={service.href}
-                                        className="text-gray-300 hover:text-[#FC7808] transition-colors"
-                                    >
-                                        {service.name}
-                                    </Link>
-                                </li>
-                            ))}
+                            <li>
+                                <Link href="/address" className="text-gray-300 hover:text-[#039B81] transition-colors">
+                                    Shipping Address
+                                </Link>
+                            </li>
+                            {/* Replaced Services List with direct Address link as per request context */}
                         </ul>
                     </div>
 
-                    {/* Quick Links */}
+                    {/* Legal & Help */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                        <h3 className="text-lg font-semibold mb-4">Legal & Help</h3>
                         <ul className="space-y-2">
                             {quickLinks.map((link) => (
                                 <li key={link.name}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-[#FC7808] transition-colors"
+                                        className="text-gray-300 hover:text-[#039B81] transition-colors"
                                     >
                                         {link.name}
                                     </Link>
@@ -84,15 +80,15 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                         <ul className="space-y-3">
                             <li className="flex items-start gap-3">
-                                <MapPin size={18} className="text-[#FC7808] mt-1 flex-shrink-0" />
+                                <MapPin size={18} className="text-[#039B81] mt-1 flex-shrink-0" />
                                 <span className="text-gray-300">Accra, Ghana</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <Phone size={18} className="text-[#FC7808] flex-shrink-0" />
+                                <Phone size={18} className="text-[#039B81] flex-shrink-0" />
                                 <span className="text-gray-300">+233 XX XXX XXXX</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <Mail size={18} className="text-[#FC7808] flex-shrink-0" />
+                                <Mail size={18} className="text-[#039B81] flex-shrink-0" />
                                 <span className="text-gray-300">info@incshipping.com</span>
                             </li>
                         </ul>
